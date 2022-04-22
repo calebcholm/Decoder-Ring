@@ -38,7 +38,7 @@ describe("caesar() submission tests written by Thinkful", () => {
       expect(actual).to.equal(expected);
     });
 
-    it("should leaves spaces and other symbols as is", () => {
+    it("should leave spaces and other symbols as is", () => {
       const message = "a message.";
       const shift = 3;
       const actual = caesar(message, shift);

@@ -4,10 +4,48 @@
 // of the anonymous function on line 6
 
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
-
   function caesar(input, shift, encode = true) {
-    // your solution code here
+    //return false if shift isn't present, is 0, > 25 or < -25
+    if (!shift || shift === 0 || shift > 25 || shift < -25) {
+      return false;
+    }
+
+    //if decoding, shift opposite direction
+    if (!encode) shift *= -1;
+
+    //change input to lowercase
+    input = input.toLowerCase();
+
+    //create variable to store completed message
+    let message = "";
+
+    //loop through input
+    for (let i = 0; i < input.length; i++) {
+      let character = input[i];
+
+      //should match only letters
+      if (character.match(/[a-z]/)) {
+        //add shift value to character at index
+        let codedCharacter = input.charCodeAt(i) + shift;
+
+        //wrap around alphabet
+        if (codedCharacter > 122) {
+          codedCharacter = codedCharacter - 26;
+        }
+        if (codedCharacter < 97) {
+          codedCharacter = codedCharacter + 26;
+        }
+
+        //new variable for storing updated character
+        let newCharacter = String.fromCharCode(codedCharacter);
+
+        //add new characters to message
+        message += newCharacter;
+      } else {
+        message += character;
+      }
+    }
+    return message;
   }
 
   return {
