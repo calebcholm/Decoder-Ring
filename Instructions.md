@@ -76,6 +76,7 @@ caesar("BPQA qa I amkzmb umaaiom!", 8, false); //> 'this is a secret message!'
 caesar("thinkful"); //> false
 caesar("thinkful", 99); //> false
 caesar("thinkful", -26); //> false
+
 Polybius square
   1  2  3  4  5
 1 A  B  C  D  E
