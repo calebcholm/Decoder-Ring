@@ -111,6 +111,7 @@ polybius("Hello world"); //> '3251131343 2543241341'
 polybius("3251131343 2543241341", false); //> "hello world"
 polybius("4432423352125413", false); //> "th(i/j)nkful
 polybius("44324233521254134", false); //> false
+
 Substitution cipher
 image.png
 
@@ -147,4 +148,6 @@ substitution("y&ii$r&", "$wae&zrdxtfcygvuhbijnokmpl", false); //> "message"
 
 substitution("thinkful", "short"); //> false
 substitution("thinkful", "abcabcabcabcabcabcabcabcyz"); //> false
+
+
 Note: In addition to needing to pass the tests and requirements in the instructions here, please review the Rubric Requirements for the human-graded part of this project in your Thinkful curriculum page.
